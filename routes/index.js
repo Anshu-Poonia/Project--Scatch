@@ -8,7 +8,7 @@ router.get("/", (req, res) => {
 });
 
 router.get("/shop", isLoggedIn, (req, res)=>{
-    res.render("shop");
+    res.render("shop", { products: [] });
 })
 
 

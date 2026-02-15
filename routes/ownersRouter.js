@@ -20,8 +20,9 @@ if (process.env.NODE_ENV === "development") {   //create a new owner only in dev
 }
 
 
-router.get("/", (req, res) => {
-    res.send("hey");
+router.get("/admin", (req, res) => {
+    let success = req.flash("success");
+    res.render("createproducts", { success });
 });
 
 
