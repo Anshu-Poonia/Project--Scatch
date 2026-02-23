@@ -19,7 +19,7 @@ if (process.env.NODE_ENV === "development") {   //create a new owner only in dev
     });
 }
 
-
+// creating the admin router where admin create the products
 router.get("/admin", (req, res) => {
     let success = req.flash("success");
     res.render("createproducts", { success });
